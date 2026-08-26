@@ -1,0 +1,229 @@
+/* ==========================================================================
+   ANNOUNCEMENT PAGE MODERN CYBER STYLES
+   ========================================================================== */
+
+:root {
+    --bg-dark: #050711;
+    --card-bg: rgba(18, 22, 43, 0.95);
+    --border-color: rgba(0, 240, 255, 0.25);
+    --neon-cyan: #00f0ff;
+    --neon-gold: #ffd700;
+    --win-green: #00ff66;
+    --text-slate: #94a3b8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Rajdhani', 'Hanuman', sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.announcement-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 32px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8),
+                inset 0 0 20px rgba(0, 240, 255, 0.05);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Header & Voice Controls */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.badge-live {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--win-green);
+    background: rgba(0, 255, 102, 0.1);
+    border: 1px solid var(--win-green);
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 1.5px;
+}
+
+.voice-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-voice {
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    font-family: 'Hanuman', 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-voice:hover {
+    background: var(--neon-cyan);
+    color: #000000;
+    box-shadow: 0 0 12px var(--neon-cyan);
+}
+
+.btn-stop {
+    background: rgba(255, 51, 102, 0.1);
+    border-color: #ff3366;
+    color: #ff3366;
+}
+
+.btn-stop:hover {
+    background: #ff3366;
+    color: #ffffff;
+    box-shadow: 0 0 12px #ff3366;
+}
+
+/* Titles */
+.main-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    line-height: 1.1;
+}
+
+.subtitle {
+    color: var(--text-slate);
+    font-size: 1.1rem;
+    margin-top: -16px;
+}
+
+/* Index Navigation */
+.table-of-contents {
+    background: rgba(5, 7, 17, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.toc-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--neon-gold);
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.table-of-contents a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.table-of-contents a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Article Sections */
+.article-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 20px;
+}
+
+.article-section h2 {
+    font-family: 'Rajdhani', 'Hanuman', sans-serif;
+    font-size: 1.3rem;
+    color: var(--neon-gold);
+    line-height: 1.4;
+}
+
+.en-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+.km-text {
+    font-family: 'Hanuman', serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+/* Disclaimer Box */
+.disclaimer-box {
+    background: rgba(255, 215, 0, 0.05);
+    border: 1.5px dashed var(--neon-gold);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement-footer {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-slate);
+    margin-top: 10px;
+}
+
+/* Responsive Overrides */
+@media screen and (max-width: 600px) {
+    .announcement-card {
+        padding: 16px;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .voice-controls {
+        width: 100%;
+    }
+
+    .btn-voice {
+        flex: 1;
+        text-align: center;
+    }
+}
